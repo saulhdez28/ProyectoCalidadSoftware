@@ -17,7 +17,7 @@ public class CalidadSoftwareProyectoFinal {
         System.setProperty("webdriver.chrome.driver",
                 "C:\\SeleniumChromeDriver\\chromedriver_win32\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        String baseUrl = "https://www.amazon.com/";
-        driver.get(baseUrl);
+        String siteURL = "https://www.amazon.com/";
+        driver.get(siteURL);
     }
 }
