@@ -25,10 +25,9 @@ public class CalidadSoftwareProyectoFinal {
         String siteURL = "https://www.amazon.com/";
         driver.get(siteURL);
         driver.manage().window().maximize();
-        
+
         //testSearchBox(driver);
         //testCambioIdioma(driver);
-        //testCarritoCompras(driver);
         //testCambioPais(driver);
         testInformacionPage(driver);
 
@@ -50,21 +49,17 @@ public class CalidadSoftwareProyectoFinal {
 
     static void testCambioPais(WebDriver driver) throws InterruptedException {
 
-        WebElement getmenu = driver.findElement(By.className("icp-nav-link-inner")); //xpath the parent
+        WebElement getmenu = driver.findElement(By.className("icp-nav-link-inner"));
 
         Actions act = new Actions(driver);
         act.moveToElement(getmenu).perform();
-
         Thread.sleep(2000);
-        WebElement clickElement = driver.findElement(By.xpath("//*[@id='icp-flyout-mkt-change']/span/div"));//xpath the child
+        WebElement clickElement = driver.findElement(By.xpath("//*[@id='icp-flyout-mkt-change']/span/div"));
         act.moveToElement(clickElement).click().perform();
-
         driver.findElement(By.className("a-dropdown-prompt")).click();
         driver.findElement(By.id("icp-dropdown-item-1")).click();
         Thread.sleep(2000);
-
         driver.findElement(By.className("a-button-input")).click();
-
     }
 
     static void testInformacionPage(WebDriver driver) {
